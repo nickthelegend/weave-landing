@@ -2,12 +2,13 @@
 
 @theme {
   --font-sans: "Inter", sans-serif;
-  --font-display: "Space Grotesk", sans-serif;
-  --font-mono: "JetBrains Mono", monospace;
-  
+  --font-display: "Inter", sans-serif;
+  --font-mono: "Inter", monospace;
+
   --color-primary: #ad46ff;
   --color-surface: #111111;
-  --color-secondary-text: #888888;
+  --color-secondary-text: #a1a1a6;
+  /* lighter gray for apple-like text */
 }
 
 @layer base {
@@ -25,7 +26,7 @@
   .text-glow {
     text-shadow: 0 0 20px rgba(173, 70, 255, 0.3);
   }
-  
+
   .purple-border {
     @apply border border-primary/20;
   }
@@ -38,6 +39,7 @@
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
+
   .no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
