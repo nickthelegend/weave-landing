@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Inter", sans-serif;
-  --font-display: "Inter", sans-serif;
-  --font-mono: "Inter", monospace;
+  --font-sans: "DM Sans Variable", system-ui, sans-serif;
+  --font-display: "DM Sans Variable", system-ui, sans-serif;
+  --font-mono: "Courier New", monospace;
 
   --color-primary: #ad46ff;
-  --color-surface: #111111;
-  --color-secondary-text: #a1a1a6;
-  /* lighter gray for apple-like text */
+  --color-surface: #050505;
+  --color-secondary-text: #86868b;
+  /* Premium Apple gray */
 }
 
 @layer base {
@@ -19,6 +19,13 @@
 
   body {
     @apply bg-black text-white antialiased overflow-x-hidden selection:bg-primary/30;
+  }
+
+  .grid-texture {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 40px 40px;
   }
 }
 

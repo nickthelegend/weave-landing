@@ -66,9 +66,12 @@ const Navbar = () => {
           ))}
         </div>
 
-        <button className="bg-primary text-white px-8 py-3 rounded-full font-semibold text-[13px] tracking-normal flex items-center gap-3 hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(173,70,255,0.3)]">
+        <a
+          href="http://localhost:3000"
+          className="bg-primary text-white px-8 py-3 rounded-full font-semibold text-[13px] tracking-normal flex items-center gap-3 hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(173,70,255,0.3)]"
+        >
           Launch App <ArrowRight size={14} />
-        </button>
+        </a>
       </div>
     </nav>
   );
@@ -212,9 +215,12 @@ export default function LandingPage() {
           transition={{ delay: 1 }}
           className="flex flex-col sm:flex-row gap-6 mb-20"
         >
-          <button className="bg-primary text-white px-10 py-4 rounded-full font-semibold text-[15px] tracking-normal shadow-[0_0_40px_rgba(173,70,255,0.4)] hover:scale-105 active:scale-95 transition-all">
+          <a
+            href="http://localhost:3000"
+            className="bg-primary text-white px-10 py-4 rounded-full font-semibold text-[15px] tracking-normal shadow-[0_0_40px_rgba(173,70,255,0.4)] hover:scale-105 active:scale-95 transition-all"
+          >
             Launch App <ArrowRight size={18} className="inline ml-2" />
-          </button>
+          </a>
           <button className="bg-[#1c1c1e] text-white hover:bg-[#2c2c2e] px-8 py-4 rounded-full font-semibold text-[15px] transition-all flex items-center justify-center gap-3">
             <Github size={20} /> View on GitHub
           </button>
@@ -577,9 +583,12 @@ export default function LandingPage() {
         <h2 className="text-7xl md:text-9xl font-display font-semibold  tracking-tight leading-none text-glow">Start earning. <br /> Right now.</h2>
         <p className="max-w-md mx-auto text-secondary-text text-sm text-[#86868b] leading-relaxed">Weave is live on Initia testnet. Get test tokens and try it in 60 seconds.</p>
         <div className="flex flex-col sm:flex-row justify-center gap-8 pt-10">
-          <button className="bg-primary text-white px-12 py-5 rounded-full font-semibold text-[17px] tracking-normal shadow-[0_0_60px_rgba(173,70,255,0.4)] hover:scale-110 active:scale-95 transition-all">
+          <a
+            href="http://localhost:3000"
+            className="bg-primary text-white px-12 py-5 rounded-full font-semibold text-[17px] tracking-normal shadow-[0_0_60px_rgba(173,70,255,0.4)] hover:scale-110 active:scale-95 transition-all"
+          >
             Launch Terminal →
-          </button>
+          </a>
           <button className="bg-[#1c1c1e] text-white hover:bg-[#2c2c2e] px-10 py-4 rounded-full font-semibold text-[17px] transition-all">
             Get tokens
           </button>
