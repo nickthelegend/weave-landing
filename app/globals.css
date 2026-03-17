@@ -1,26 +1,50 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --font-sans: "Inter", sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-primary: #ad46ff;
+  --color-surface: #111111;
+  --color-secondary-text: #888888;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+  }
+
+  body {
+    @apply bg-black text-white antialiased overflow-x-hidden selection:bg-primary/30;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .text-glow {
+    text-shadow: 0 0 20px rgba(173, 70, 255, 0.3);
+  }
+  
+  .purple-border {
+    @apply border border-primary/20;
+  }
+
+  .glass-nav {
+    @apply bg-black/50 backdrop-blur-xl border-b border-primary/10;
+  }
+
+  /* Hide scrollbar but keep functionality */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Custom radial gradient for hero background */
+.hero-glow {
+  background: radial-gradient(circle at center, rgba(173, 70, 255, 0.08) 0%, rgba(0, 0, 0, 0) 70%);
 }
