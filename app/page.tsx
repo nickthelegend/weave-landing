@@ -66,7 +66,7 @@ const Navbar = () => {
           ))}
         </div>
 
-        <button className="bg-white text-black hover:bg-white/90 px-6 py-2 rounded-full font-semibold  text-[11px] tracking-normal text-white/60 flex items-center gap-3 hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(173,70,255,0.3)]">
+        <button className="bg-primary text-white px-8 py-3 rounded-full font-semibold text-[13px] tracking-normal flex items-center gap-3 hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(173,70,255,0.3)]">
           Launch App <ArrowRight size={14} />
         </button>
       </div>
@@ -99,7 +99,7 @@ const StatItem = ({ label, value }: { label: string, value: string }) => {
       <p className="text-3xl font-mono font-bold tracking-tight tabular-nums">
         {value.startsWith("$") ? "$" : ""}{displayValue.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 })}{value.endsWith("%") ? "%" : ""}
       </p>
-      <p className="text-[10px] font-semibold tracking-normal text-white/60 text-white/30">{label}</p>
+      <p className="text-[12px] font-semibold text-white/80">{label}</p>
     </div>
   );
 };
@@ -134,7 +134,7 @@ const TypewriterLog = () => {
   }, [subIndex, index, reverse]);
 
   return (
-    <div className="font-mono text-[10px] md:text-xs text-white/80 h-12 flex items-center bg-[#161618] border border-white/10 p-4 rounded border border-white/5">
+    <div className="font-mono text-[10px] md:text-xs text-white/80 h-12 flex items-center bg-black p-4 rounded border border-white/5">
       <span className="text-primary mr-2">{`>>>`}</span>
       {logs[index].substring(0, subIndex)}
       <span className="w-2 h-4 bg-primary ml-1 animate-pulse" />
@@ -201,7 +201,7 @@ export default function LandingPage() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.8, duration: 1 }}
-          className="max-w-[480px] text-secondary-text text-sm md:text-base tracking-normal text-white/60 leading-relaxed mb-12"
+          className="max-w-[480px] text-secondary-text text-sm md:text-base text-[#86868b] leading-relaxed mb-12"
         >
           Weave is the first automated yield vault on Initia. Deposit USDC. Earn 169% APY through daily auto-compounding. Withdraw anytime.
         </motion.p>
@@ -212,10 +212,10 @@ export default function LandingPage() {
           transition={{ delay: 1 }}
           className="flex flex-col sm:flex-row gap-6 mb-20"
         >
-          <button className="bg-white text-black hover:bg-white/90 px-8 py-4 rounded-full font-semibold  text-sm tracking-wide shadow-[0_0_40px_rgba(173,70,255,0.4)] hover:scale-105 active:scale-95 transition-all">
+          <button className="bg-primary text-white px-10 py-4 rounded-full font-semibold text-[15px] tracking-normal shadow-[0_0_40px_rgba(173,70,255,0.4)] hover:scale-105 active:scale-95 transition-all">
             Launch App <ArrowRight size={18} className="inline ml-2" />
           </button>
-          <button className="bg-[#1c1c1e] text-white hover:bg-[#2c2c2e] px-8 py-4 rounded-full font-semibold  text-sm tracking-wide hover:border-primary/40 hover:text-white transition-all flex items-center justify-center gap-3">
+          <button className="bg-[#1c1c1e] text-white hover:bg-[#2c2c2e] px-8 py-4 rounded-full font-semibold text-[15px] transition-all flex items-center justify-center gap-3">
             <Github size={20} /> View on GitHub
           </button>
         </motion.div>
@@ -253,7 +253,7 @@ export default function LandingPage() {
           <h2 className="text-5xl md:text-7xl lg:text-9xl font-display font-semibold tracking-tight leading-none text-primary">
             But nobody tells you <br /> what you actually earn.
           </h2>
-          <p className="max-w-2xl text-secondary-text text-base md:text-xl tracking-normal text-white/60 leading-relaxed">
+          <p className="max-w-2xl text-secondary-text text-base md:text-xl text-[#86868b] leading-relaxed">
             Most of that yield is vested for 12 months. Your liquid earnings are actually $14/month on a $1,000 deposit. We fixed that.
           </p>
         </div>
@@ -267,15 +267,15 @@ export default function LandingPage() {
             {/* Left: Without */}
             <div className="flex-1 bg-surface p-12 md:p-20 flex flex-col justify-between">
               <div className="space-y-2">
-                <p className="text-[10px] font-semibold tracking-normal text-white/60 text-white/20">Without Weave</p>
+                <p className="text-[10px] font-semibold text-[#86868b]">Without Weave</p>
                 <h3 className="text-5xl md:text-7xl font-mono font-semibold tracking-tight tabular-nums">
                   ${withoutWeave.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 })}
                 </h3>
-                <p className="text-[10px] font-bold text-white/20 tracking-normal text-white/60">
+                <p className="text-[10px] font-bold text-white/20 text-[#86868b]">
                   ${deposit.toLocaleString()} at 169% APR · 1 Year
                 </p>
               </div>
-              <p className="text-sm font-medium text-white/40 tracking-normal text-white/60">
+              <p className="text-sm font-medium text-[#86868b]">
                 Simple interest. <br /> Rewards sit idle.
               </p>
             </div>
@@ -285,16 +285,16 @@ export default function LandingPage() {
 
             {/* Right: With */}
             <div className="flex-1 bg-primary/5 p-12 md:p-20 flex flex-col justify-between relative group">
-              <div className="absolute top-8 right-8 bg-white text-black hover:bg-white/90 text-[9px] font-semibold px-3 py-1 rounded-full tracking-normal text-white/60 shadow-[0_0_20px_rgba(173,70,255,0.5)]">
+              <div className="absolute top-8 right-8 bg-primary text-white text-[11px] font-semibold px-3 py-1 rounded-full tracking-normal shadow-[0_0_20px_rgba(173,70,255,0.5)]">
                 Recommended
               </div>
 
               <div className="space-y-2">
-                <p className="text-[10px] font-semibold tracking-normal text-white/60 text-primary">With Weave</p>
+                <p className="text-[10px] font-semibold text-[#86868b] text-primary">With Weave</p>
                 <h3 className="text-5xl md:text-7xl font-mono font-semibold tracking-tight tabular-nums text-primary text-glow">
                   ${withWeave.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 })}
                 </h3>
-                <p className="text-[10px] font-bold text-primary/40 tracking-normal text-white/60">
+                <p className="text-[10px] font-bold text-primary/40 text-[#86868b]">
                   ${deposit.toLocaleString()} with daily compounding · 1 Year
                 </p>
               </div>
@@ -306,7 +306,7 @@ export default function LandingPage() {
                   </p>
                   <p className="text-[11px] font-semibold tracking-wide text-white">More with Weave</p>
                 </div>
-                <p className="text-sm font-medium text-primary/60 tracking-normal text-white/60">
+                <p className="text-sm font-medium text-primary/60 text-[#86868b]">
                   Auto-compounded daily. <br /> Every reward reinvested.
                 </p>
               </div>
@@ -349,7 +349,7 @@ export default function LandingPage() {
               <div className="flex justify-between items-center mb-12">
                 <div className="flex items-center gap-3">
                   <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                  <span className="text-[10px] font-semibold text-white/40 tracking-normal text-white/60">Active Connection</span>
+                  <span className="text-[10px] font-semibold text-[#86868b]">Active Connection</span>
                 </div>
                 <span className="text-[10px] font-mono text-primary">0x42...ef21</span>
               </div>
@@ -358,7 +358,7 @@ export default function LandingPage() {
                   <p className="text-[9px] font-semibold text-white/20 mb-2">Deposit mUSDC</p>
                   <p className="text-4xl font-mono font-bold tabular-nums">10,000.00</p>
                 </div>
-                <button className="w-full bg-primary py-5 rounded-[32px] font-semibold  text-xs tracking-normal text-white/60 shadow-[0_0_30px_rgba(173,70,255,0.2)]">
+                <button className="w-full bg-primary text-white py-5 rounded-full font-semibold text-[15px] hover:bg-primary/90 transition-all shadow-[0_0_30px_rgba(173,70,255,0.2)]">
                   Execute Deposit
                 </button>
               </div>
@@ -367,7 +367,7 @@ export default function LandingPage() {
           <div className="space-y-6 order-1 lg:order-2">
             <p className="font-mono text-primary text-[10px] font-bold tracking-wide">Step 01</p>
             <h2 className="text-5xl md:text-7xl font-display font-semibold leading-none">Deposit once.</h2>
-            <p className="text-secondary-text text-base md:text-lg tracking-normal text-white/60 leading-relaxed max-w-md">
+            <p className="text-secondary-text text-base md:text-lg text-[#86868b] leading-relaxed max-w-md">
               Single token entry. No need to split your tokens manually. Weave's Zap-In contract handles everything. One click. Done.
             </p>
           </div>
@@ -378,7 +378,7 @@ export default function LandingPage() {
           <div className="space-y-6">
             <p className="font-mono text-primary text-[10px] font-bold tracking-wide">Step 02</p>
             <h2 className="text-5xl md:text-7xl font-display font-semibold leading-none text-primary">Compounds <br /> daily.</h2>
-            <p className="text-secondary-text text-base md:text-lg tracking-normal text-white/60 leading-relaxed max-w-md">
+            <p className="text-secondary-text text-base md:text-lg text-[#86868b] leading-relaxed max-w-md">
               Our keeper bot harvests your VIP emissions and swap fees daily. Every reward is automatically reinvested. While you sleep.
             </p>
           </div>
@@ -386,7 +386,7 @@ export default function LandingPage() {
             <div className="terminal-card bg-surface p-10 border-primary/10 space-y-8">
               <div className="flex items-center gap-3 text-white/40 mb-4">
                 <Terminal size={18} />
-                <span className="text-[10px] font-semibold tracking-normal text-white/60">Protocol Harvest Log</span>
+                <span className="text-[10px] font-semibold text-[#86868b]">Protocol Harvest Log</span>
               </div>
               <TypewriterLog />
               <div className="grid grid-cols-2 gap-4">
@@ -406,17 +406,17 @@ export default function LandingPage() {
         {/* Step 3 */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <motion.div variants={fadeInUp} className="order-2 lg:order-1">
-            <div className="terminal-card bg-white text-black hover:bg-white/90 p-12 border-none shadow-[0_0_50px_rgba(173,70,255,0.2)]">
+            <div className="terminal-card bg-primary text-white p-12 border-none shadow-[0_0_50px_rgba(173,70,255,0.2)]">
               <div className="space-y-12">
                 <div className="space-y-2">
-                  <p className="text-[10px] font-semibold text-white/40 tracking-wide">Current Position</p>
-                  <h4 className="text-6xl font-mono font-semibold tracking-tight tabular-nums text-glow">$1,284.73</h4>
-                  <div className="flex items-center gap-2 text-white font-bold text-[10px] tracking-normal text-white/60">
+                  <p className="text-[12px] font-semibold text-white/80">Current Position</p>
+                  <h4 className="text-6xl font-mono font-semibold tracking-tight tabular-nums text-white">$1,284.73</h4>
+                  <div className="flex items-center gap-2 text-white font-bold text-[12px]">
                     <TrendingUp size={14} className="animate-bounce" />
                     + $284.73 Yield Earned
                   </div>
                 </div>
-                <button className="w-full bg-black text-white py-5 rounded-[32px] font-semibold  text-xs tracking-normal text-white/60 hover:bg-white/10 transition-all">
+                <button className="w-full bg-black text-white py-5 rounded-full font-semibold text-[14px] hover:bg-white/20 transition-all">
                   Withdraw Principal + Yield
                 </button>
               </div>
@@ -425,7 +425,7 @@ export default function LandingPage() {
           <div className="space-y-6 order-1 lg:order-2">
             <p className="font-mono text-primary text-[10px] font-bold tracking-wide">Step 03</p>
             <h2 className="text-5xl md:text-7xl font-display font-semibold leading-none">Withdraw whenever.</h2>
-            <p className="text-secondary-text text-base md:text-lg tracking-normal text-white/60 leading-relaxed max-w-md">
+            <p className="text-secondary-text text-base md:text-lg text-[#86868b] leading-relaxed max-w-md">
               No lockups. No penalties. Your position grows every day. Withdraw your original deposit plus everything Weave earned you.
             </p>
           </div>
@@ -433,7 +433,7 @@ export default function LandingPage() {
       </SectionWrapper>
 
       {/* Strategies */}
-      <SectionWrapper id="strategies" className="bg-[#161618] border border-white/10">
+      <SectionWrapper id="strategies" className="bg-black">
         <div className="max-w-7xl mx-auto space-y-16 text-center">
           <div className="space-y-4">
             <p className="font-mono text-secondary-text text-[10px] font-bold tracking-wide">Yield Sources</p>
@@ -470,11 +470,11 @@ export default function LandingPage() {
                 <div className="flex justify-between items-start mb-10">
                   <div className="space-y-1">
                     <h3 className="text-3xl font-semibold">{s.name}</h3>
-                    <p className="text-[10px] font-bold text-white/40 tracking-normal text-white/60">{s.sub}</p>
+                    <p className="text-[10px] font-bold text-[#86868b]">{s.sub}</p>
                   </div>
                   <div className="flex items-center gap-2 px-3 py-1 bg-[#0B7B5E]/10 border border-[#0B7B5E]/20 rounded-full">
                     <div className="w-1.5 h-1.5 rounded-full bg-[#0B7B5E] animate-pulse" />
-                    <span className="text-[8px] font-semibold text-[#0B7B5E] tracking-normal text-white/60">Active</span>
+                    <span className="text-[8px] font-semibold text-[#0B7B5E] text-[#86868b]">Active</span>
                   </div>
                 </div>
                 <div className="space-y-6">
@@ -488,7 +488,7 @@ export default function LandingPage() {
                 <div className="mt-8 flex justify-between items-center">
                   <div className="flex items-center gap-2">
                     <ShieldCheck size={14} className="text-white/20" />
-                    <span className="text-[10px] font-semibold text-white/20 tracking-normal text-white/60">{s.risk} Risk</span>
+                    <span className="text-[10px] font-semibold text-white/20 text-[#86868b]">{s.risk} Risk</span>
                   </div>
                   <ChevronRight className="text-primary" size={20} />
                 </div>
@@ -506,7 +506,7 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-32 items-center">
           <div className="space-y-10 text-center lg:text-left">
             <h2 className="text-7xl md:text-9xl font-display font-semibold leading-[0.85] tracking-tight">No hidden <br /> fees.</h2>
-            <p className="text-secondary-text text-lg md:text-xl tracking-normal text-white/60 leading-relaxed max-w-md mx-auto lg:mx-0">
+            <p className="text-secondary-text text-lg md:text-xl text-[#86868b] leading-relaxed max-w-md mx-auto lg:mx-0">
               10% of yield goes to WEAVE token stakers. That's it. Everything else is yours.
             </p>
           </div>
@@ -518,12 +518,12 @@ export default function LandingPage() {
               }}
             >
               <div className="absolute inset-10 bg-black rounded-full flex flex-col items-center justify-center text-center p-6 border border-white/5">
-                <p className="text-[10px] font-semibold text-white/40 tracking-normal text-white/60 mb-1">Genesis Distribution</p>
+                <p className="text-[10px] font-semibold text-[#86868b] mb-1">Genesis Distribution</p>
                 <p className="text-4xl font-display font-semibold text-white tracking-tight leading-none">100M</p>
-                <p className="text-[10px] font-bold text-primary mt-1 tracking-normal text-white/60">WEAVE</p>
+                <p className="text-[10px] font-bold text-primary mt-1 text-[#86868b]">WEAVE</p>
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-x-12 gap-y-6 text-[10px] font-semibold tracking-normal text-white/60">
+            <div className="grid grid-cols-2 gap-x-12 gap-y-6 text-[10px] font-semibold text-[#86868b]">
               <div className="flex items-center gap-3"><div className="w-2 h-2 bg-[#ad46ff] rounded-full" /> LP Rewards (40%)</div>
               <div className="flex items-center gap-3"><div className="w-2 h-2 bg-[#6b21a8] rounded-full" /> Team (20%)</div>
               <div className="flex items-center gap-3"><div className="w-2 h-2 bg-[#374151] rounded-full" /> Treasury (20%)</div>
@@ -536,7 +536,7 @@ export default function LandingPage() {
                   placeholder="Email for priority access..."
                   className="flex-grow bg-white/5 border border-white/10 rounded-[32px] p-4 text-xs outline-none focus:border-primary/40 transition-all placeholder:text-white/10"
                 />
-                <button className="bg-white text-black hover:bg-white/90 px-8 py-4 rounded-[32px] font-semibold  text-[11px] tracking-normal text-white/60">Join</button>
+                <button className="bg-primary text-white px-8 py-4 rounded-full font-semibold text-[15px]">Join</button>
               </div>
             </div>
           </div>
@@ -544,7 +544,7 @@ export default function LandingPage() {
       </SectionWrapper>
 
       {/* Roadmap */}
-      <SectionWrapper id="roadmap" className="bg-[#161618] border border-white/10">
+      <SectionWrapper id="roadmap" className="bg-black">
         <div className="max-w-7xl mx-auto space-y-16">
           <h2 className="text-5xl font-display font-semibold text-center tracking-tight">What we're building.</h2>
           <div className="flex overflow-x-auto no-scrollbar pb-10 gap-8 lg:justify-between min-w-full">
@@ -561,10 +561,10 @@ export default function LandingPage() {
                 </div>
                 <div className="space-y-4">
                   <div>
-                    <p className="text-[10px] font-semibold text-primary tracking-normal text-white/60">{p.v} // {p.t}</p>
+                    <p className="text-[10px] font-semibold text-primary text-[#86868b]">{p.v} // {p.t}</p>
                     <h4 className="text-xl font-semibold mt-1">{p.title}</h4>
                   </div>
-                  <p className="text-[10px] font-medium text-white/60 leading-relaxed tracking-normal text-white/60">{p.desc}</p>
+                  <p className="text-[10px] font-medium text-white/60 leading-relaxed text-[#86868b]">{p.desc}</p>
                 </div>
               </div>
             ))}
@@ -575,16 +575,16 @@ export default function LandingPage() {
       {/* Final CTA */}
       <SectionWrapper className="text-center space-y-12">
         <h2 className="text-7xl md:text-9xl font-display font-semibold  tracking-tight leading-none text-glow">Start earning. <br /> Right now.</h2>
-        <p className="max-w-md mx-auto text-secondary-text text-sm tracking-normal text-white/60 leading-relaxed">Weave is live on Initia testnet. Get test tokens and try it in 60 seconds.</p>
+        <p className="max-w-md mx-auto text-secondary-text text-sm text-[#86868b] leading-relaxed">Weave is live on Initia testnet. Get test tokens and try it in 60 seconds.</p>
         <div className="flex flex-col sm:flex-row justify-center gap-8 pt-10">
-          <button className="bg-white text-black hover:bg-white/90 px-10 py-4 rounded-full font-semibold  text-xl tracking-wide shadow-[0_0_60px_rgba(173,70,255,0.4)] hover:scale-110 active:scale-95 transition-all">
+          <button className="bg-primary text-white px-12 py-5 rounded-full font-semibold text-[17px] tracking-normal shadow-[0_0_60px_rgba(173,70,255,0.4)] hover:scale-110 active:scale-95 transition-all">
             Launch Terminal →
           </button>
-          <button className="border border-white/20 text-white/60 px-10 py-4 rounded-full font-semibold  text-xl tracking-wide hover:text-white hover:border-white transition-all">
+          <button className="bg-[#1c1c1e] text-white hover:bg-[#2c2c2e] px-10 py-4 rounded-full font-semibold text-[17px] transition-all">
             Get tokens
           </button>
         </div>
-        <div className="flex flex-wrap justify-center gap-12 pt-24 opacity-30 text-[10px] font-semibold tracking-normal text-white/60">
+        <div className="flex flex-wrap justify-center gap-12 pt-24 opacity-30 text-[10px] font-semibold text-[#86868b]">
           <span className="flex items-center gap-2"><Lock size={12} /> Non-custodial</span>
           <span className="flex items-center gap-2"><Code size={12} /> Open source</span>
           <span className="flex items-center gap-2"><CheckCircle2 size={12} /> 7/7 Tests Passed</span>
@@ -599,28 +599,28 @@ export default function LandingPage() {
               <span className="text-xl font-display font-bold tracking-tight">Weave</span>
               <div className="w-1.5 h-1.5 rounded-full bg-primary mt-1 shadow-[0_0_10px_#ad46ff]" />
             </div>
-            <p className="text-[9px] font-medium text-white/20 leading-relaxed tracking-normal text-white/60 max-w-[200px]">
+            <p className="text-[9px] font-medium text-white/20 leading-relaxed text-[#86868b] max-w-[200px]">
               Aggregating institutional liquidity across the Initia ecosystem.
             </p>
           </div>
           <div className="space-y-6">
-            <p className="text-[10px] font-semibold text-white/40 tracking-normal text-white/60">Protocol</p>
-            <div className="flex flex-col gap-4 text-[9px] font-bold text-white/20 tracking-normal text-white/60">
+            <p className="text-[10px] font-semibold text-[#86868b]">Protocol</p>
+            <div className="flex flex-col gap-4 text-[9px] font-bold text-white/20 text-[#86868b]">
               <a href="#" className="hover:text-primary transition-colors">Overview</a>
               <a href="#" className="hover:text-primary transition-colors">Vaults</a>
               <a href="#" className="hover:text-primary transition-colors">Strategies</a>
             </div>
           </div>
           <div className="space-y-6">
-            <p className="text-[10px] font-semibold text-white/40 tracking-normal text-white/60">Governance</p>
-            <div className="flex flex-col gap-4 text-[9px] font-bold text-white/20 tracking-normal text-white/60">
+            <p className="text-[10px] font-semibold text-[#86868b]">Governance</p>
+            <div className="flex flex-col gap-4 text-[9px] font-bold text-white/20 text-[#86868b]">
               <a href="#" className="hover:text-primary transition-colors">WEAVE Token</a>
               <a href="#" className="hover:text-primary transition-colors">veWEAVE Staking</a>
               <a href="#" className="hover:text-primary transition-colors">Gauges</a>
             </div>
           </div>
           <div className="space-y-6 text-right">
-            <p className="text-[10px] font-semibold text-white/40 tracking-normal text-white/60">&copy; 2026</p>
+            <p className="text-[10px] font-semibold text-[#86868b]">&copy; 2026</p>
             <p className="text-[9px] font-bold text-white/10 tracking-wide">Initia Network</p>
           </div>
         </div>
